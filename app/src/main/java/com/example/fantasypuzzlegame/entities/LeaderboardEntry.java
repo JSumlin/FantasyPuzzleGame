@@ -1,4 +1,4 @@
-package com.example.fantasypuzzlegame;
+package com.example.fantasypuzzlegame.entities;
 
 public class LeaderboardEntry {
 

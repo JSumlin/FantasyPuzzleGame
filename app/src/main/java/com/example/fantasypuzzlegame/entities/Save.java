@@ -1,6 +1,6 @@
-package com.example.fantasypuzzlegame;
+package com.example.fantasypuzzlegame.entities;
 
-public class Level {
+public class Save {
     private String name;
 
     public String getName() {

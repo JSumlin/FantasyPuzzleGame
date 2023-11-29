@@ -1,14 +1,16 @@
-package com.example.fantasypuzzlegame;
+package com.example.fantasypuzzlegame.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class YouLoseActivity extends AppCompatActivity {
+import com.example.fantasypuzzlegame.R;
+
+public class SettingsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_you_lose);
+        setContentView(R.layout.activity_settings);
     }
 }

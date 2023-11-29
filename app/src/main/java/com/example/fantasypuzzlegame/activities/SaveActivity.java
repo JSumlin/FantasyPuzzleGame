@@ -1,14 +1,16 @@
-package com.example.fantasypuzzlegame;
+package com.example.fantasypuzzlegame.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class LoadActivity extends AppCompatActivity {
+import com.example.fantasypuzzlegame.R;
+
+public class SaveActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_load);
+        setContentView(R.layout.activity_save);
     }
 }

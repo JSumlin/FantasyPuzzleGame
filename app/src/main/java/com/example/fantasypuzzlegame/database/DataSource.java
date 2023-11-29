@@ -1,9 +1,14 @@
-package com.example.fantasypuzzlegame;
+package com.example.fantasypuzzlegame.database;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.example.fantasypuzzlegame.entities.LeaderboardEntry;
+import com.example.fantasypuzzlegame.entities.Level;
+import com.example.fantasypuzzlegame.entities.LevelCompletion;
+import com.example.fantasypuzzlegame.entities.Save;
 
 public class DataSource {
     private SQLiteDatabase database;
