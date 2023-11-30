@@ -6,6 +6,15 @@ public class LeaderboardEntry {
     private Integer levelID;
     private Integer completionTime;
 
+    public LeaderboardEntry() {
+    }
+
+    public LeaderboardEntry(Integer saveID, Integer levelID, Integer completionTime) {
+        this.saveID = saveID;
+        this.levelID = levelID;
+        this.completionTime = completionTime;
+    }
+
     public Integer getSaveID() {
         return saveID;
     }

@@ -2,6 +2,7 @@ package com.example.fantasypuzzlegame.database;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -40,7 +41,7 @@ public class DataSource {
         return didSucceed;
     }
 
-    public boolean insertLevels(Level level){
+    public boolean insertLevel(Level level){
         boolean didSucceed;
         try{
             ContentValues initialValues = new ContentValues();
@@ -84,5 +85,26 @@ public class DataSource {
             didSucceed = false;
         }
         return didSucceed;
+    }
+
+    public void populateLeaderboardList(int levelID) {
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        int rank = 0;
+
+        try(Cursor result = sqLiteDatabase.rawQuery("SELECT name, completion_time FROM saves " +
+                "INNER JOIN leaderboard ON saves.id = leaderboard.save_id WHERE leaderboard.level_id " +
+                "= "+levelID+" ORDER BY completion_time ASC;", null)) {
+            if(result.getCount() != 0)
+            {
+                while (result.moveToNext())
+                {
+                    rank++;
+                    String name = result.getString(0);
+                    Integer completionTime = result.getInt(1);
+                    LeaderboardRanking ranking = new LeaderboardRanking(rank, name, completionTime);
+                    Leaderboard.leaderboardList.add(ranking);
+                }
+            }
+        }
     }
 }

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.FantasyPuzzleGame"
         tools:targetApi="31">
         <activity
+            android:name=".activities.LeaderboardDisplayActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.LeaderboardActivity"
             android:exported="false" />
         <activity
