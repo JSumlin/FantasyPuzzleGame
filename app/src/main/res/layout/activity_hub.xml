@@ -1,9 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#8BC34A"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="0px"
     tools:context=".activities.HubActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="384dp"
+        android:layout_height="74dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/saveImageButtonHub"
+            android:layout_width="61dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="4dp"
+            android:onClick="onSave"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_manage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="277dp"
+        android:layout_height="wrap_content"
+        android:text="Select A Castle"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="323dp"
+        android:layout_height="474dp">
+
+        <ImageButton
+            android:id="@+id/castle1ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="112dp"
+            android:onClick="onCastle1Select"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/castle_1" />
+
+        <ImageButton
+            android:id="@+id/castle2ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="28dp"
+            android:onClick="onCastle2Select"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/castle1ImageButton"
+            app:srcCompat="@drawable/castle_2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/leaderboardButtonHub"
+        android:layout_width="290dp"
+        android:layout_height="70dp"
+        android:onClick="onLeaderboard"
+        android:text="Leaderboard"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+</LinearLayout>
