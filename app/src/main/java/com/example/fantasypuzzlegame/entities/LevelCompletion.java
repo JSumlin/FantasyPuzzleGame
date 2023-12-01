@@ -10,6 +10,15 @@ public class LevelCompletion {
         return saveID;
     }
 
+    public LevelCompletion() {
+    }
+
+    public LevelCompletion(Integer saveID, Integer levelID, Boolean isCompleted) {
+        this.saveID = saveID;
+        this.levelID = levelID;
+        this.isCompleted = isCompleted;
+    }
+
     public void setSaveID(Integer saveID) {
         this.saveID = saveID;
     }

@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.fantasypuzzlegame.R;
+import com.example.fantasypuzzlegame.database.SaveState;
 
 public class HubActivity extends AppCompatActivity {
 
@@ -15,6 +17,8 @@ public class HubActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hub);
+        TextView textView = findViewById(R.id.textView4);
+        textView.setText("Save: " + SaveState.saveID+", "+SaveState.castleCompletions[0]+", "+SaveState.castleCompletions[1]);
     }
 
     public void onCastle1Select(View view){
