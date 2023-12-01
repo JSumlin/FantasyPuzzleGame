@@ -38,4 +38,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    // Method to be called when the 'About the Game' button is clicked
+    public void showAboutGame(View view) {
+        Intent intent = new Intent(this, AboutgameActivity.class);
+        startActivity(intent);
+    }
+
 }
