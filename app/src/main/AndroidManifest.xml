@@ -13,6 +13,9 @@
         android:theme="@style/Theme.FantasyPuzzleGame"
         tools:targetApi="31">
         <activity
+            android:name=".activities.NewSaveActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.FatherActivity"
             android:exported="false" />
         <activity
