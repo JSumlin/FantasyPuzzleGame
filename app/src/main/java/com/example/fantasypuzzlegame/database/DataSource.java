@@ -27,18 +27,17 @@ public class DataSource {
         dbHelper.close();
     }
 
-    public boolean insertSave(Save save){
-        boolean didSucceed;
+    public Long insertSave(Save save){
+        long id;
         try{
             ContentValues initialValues = new ContentValues();
 
             initialValues.put("name", save.getName());
-
-            didSucceed = database.insert("saves", null, initialValues) > 0;
+            id = database.insert("saves", null, initialValues);
         } catch (Exception e){
-            didSucceed = false;
+            return -1L;
         }
-        return didSucceed;
+        return id;
     }
 
     public boolean insertLevels(Level level){
@@ -79,7 +78,6 @@ public class DataSource {
             initialValues.put("save_id", leaderboardEntry.getSaveID());
             initialValues.put("level_id", leaderboardEntry.getLevelID());
             initialValues.put("completion_time", leaderboardEntry.getCompletionTime());
-
             didSucceed = database.insert("leaderboard", null, initialValues) > 0;
         } catch (Exception e){
             didSucceed = false;
@@ -144,15 +142,8 @@ public class DataSource {
                 SaveState.saveID = saveID;
                 while (result.moveToNext())
                 {
-                    SaveState.castleCompletionIds[result.getInt(0) - 1] = result.getInt(0);
-                    switch (result.getInt(2)){
-                        case 1:
-                            SaveState.castleCompletions[0] = result.getInt(3) == 1;
-                            break;
-                        case 2:
-                            SaveState.castleCompletions[1] = result.getInt(3) == 1;
-                            break;
-                    }
+                    SaveState.castleCompletionIds[result.getInt(2) - 1] = result.getInt(0);
+                    SaveState.castleCompletions[result.getInt(2) - 1] = result.getInt(3) == 1;
                 }
             }
         }

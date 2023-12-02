@@ -15,11 +15,7 @@ import com.example.fantasypuzzlegame.entities.LevelCompletion;
 public class MainActivity extends AppCompatActivity {
 
     public void beginGame(View view) {
-        SaveState.saveID = null;
-        for (Boolean castleCompletion : SaveState.castleCompletions){
-            castleCompletion = false;
-        }
-        Intent intent = new Intent(this, HubActivity.class);
+        Intent intent = new Intent(this, NewSaveActivity.class);
         startActivity(intent);
     }
 
