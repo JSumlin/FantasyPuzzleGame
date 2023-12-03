@@ -2,7 +2,9 @@ package com.example.fantasypuzzlegame.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.fantasypuzzlegame.R;
@@ -30,5 +32,10 @@ public class YouWinActivity extends AppCompatActivity {
         } else {
             Toast.makeText(YouWinActivity.this, "Save unsuccessful", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void onReturnToHub(View view){
+        Intent intent = new Intent(this, HubActivity.class);
+        startActivity(intent);
     }
 }

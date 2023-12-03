@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="326dp"
         android:layout_height="198dp"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,23 +30,14 @@
             android:id="@+id/hubButtonYouLose"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="30dp"
+            android:layout_marginTop="30dp"
+            android:onClick="onReturnToHub"
             android:text="Return to Hub"
             android:textSize="20sp"
             app:cornerRadius="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/quitButtonYouLose"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="Quit"
-            android:textColorHighlight="#246326"
-            android:textSize="20sp"
-            app:cornerRadius="4dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
