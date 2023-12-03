@@ -1,24 +1,23 @@
 package com.example.fantasypuzzlegame.entities;
 
-public class LeaderboardEntry {
-
-    private Integer saveID;
+public class LeaderboardRanking {
+    private String saveName;
     private Integer numOfLevelsCompleted;
 
-    public LeaderboardEntry() {
+    public LeaderboardRanking() {
     }
 
-    public LeaderboardEntry(Integer saveID, Integer numOfLevelsCompleted) {
-        this.saveID = saveID;
+    public LeaderboardRanking(String saveName, Integer numOfLevelsCompleted) {
+        this.saveName = saveName;
         this.numOfLevelsCompleted = numOfLevelsCompleted;
     }
 
-    public Integer getSaveID() {
-        return saveID;
+    public String getSaveName() {
+        return saveName;
     }
 
-    public void setSaveID(Integer saveID) {
-        this.saveID = saveID;
+    public void setSaveName(String saveName) {
+        this.saveName = saveName;
     }
 
     public Integer getNumOfLevelsCompleted() {

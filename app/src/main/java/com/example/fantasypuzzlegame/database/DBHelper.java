@@ -20,8 +20,8 @@ public class DBHelper extends SQLiteOpenHelper {
             " foreign key(save_id) references saves(id), foreign key(level_id) references levels(id));";
 
     private static final String CREATE_LEADERBOARD_TABLE = "create table leaderboard (id integer primary key " +
-            "autoincrement, save_id integer, level_id integer, completion_time integer," +
-            " foreign key(save_id) references saves(id), foreign key(level_id) references levels(id));";
+            "autoincrement, save_id integer unique, num_of_completions integer," +
+            " foreign key(save_id) references saves(id));";
 
     public DBHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

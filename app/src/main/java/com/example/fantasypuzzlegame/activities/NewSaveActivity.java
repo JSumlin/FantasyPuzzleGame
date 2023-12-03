@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.example.fantasypuzzlegame.R;
 import com.example.fantasypuzzlegame.database.DataSource;
 import com.example.fantasypuzzlegame.database.SaveState;
+import com.example.fantasypuzzlegame.entities.LeaderboardEntry;
 import com.example.fantasypuzzlegame.entities.LevelCompletion;
 import com.example.fantasypuzzlegame.entities.Save;
 
@@ -36,6 +37,7 @@ public class NewSaveActivity extends AppCompatActivity {
             for(int i = 1; i<= SaveState.castleCompletions.length; i++){
                 dataSource.insertLevelCompletion(new LevelCompletion(saveId.intValue(), i, false));
             }
+            dataSource.insertLeaderboardEntry(new LeaderboardEntry(saveId.intValue(), 0));
             dataSource.close();
         } catch (Exception e){
             wasSuccessful = false;

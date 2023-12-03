@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.fantasypuzzlegame.R;
+import com.example.fantasypuzzlegame.database.DBHelper;
 import com.example.fantasypuzzlegame.database.DataSource;
 import com.example.fantasypuzzlegame.database.SaveState;
 import com.example.fantasypuzzlegame.entities.LevelCompletion;

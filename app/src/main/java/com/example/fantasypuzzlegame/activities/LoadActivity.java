@@ -77,7 +77,7 @@ public class LoadActivity extends AppCompatActivity {
             }
         }
         catch (Exception e) {
-            Toast.makeText(this, "Error retrieving contacts", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Error retrieving saves", Toast.LENGTH_LONG).show();
         }
 
     }
