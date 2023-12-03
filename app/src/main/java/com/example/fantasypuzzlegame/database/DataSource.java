@@ -9,7 +9,11 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.fantasypuzzlegame.entities.LeaderboardEntry;
 import com.example.fantasypuzzlegame.entities.Level;
 import com.example.fantasypuzzlegame.entities.LevelCompletion;
+import com.example.fantasypuzzlegame.entities.Load;
 import com.example.fantasypuzzlegame.entities.Save;
+
+import java.util.ArrayList;
+import java.util.Calendar;
 
 public class DataSource {
     private SQLiteDatabase database;
@@ -148,5 +152,28 @@ public class DataSource {
             }
         }
         return successful;
+    }
+
+    public ArrayList<Load> getAllSaves(){
+        ArrayList<Load> saves = new ArrayList<Load>();
+        try {
+            String query = "SELECT  * FROM saves ORDER BY id ASC;";
+            Cursor cursor = database.rawQuery(query, null);
+
+            Load newSave;
+            cursor.moveToFirst();
+            while (!cursor.isAfterLast()) {
+                newSave = new Load();
+                newSave.setSaveId(cursor.getInt(0));
+                newSave.setSaveName(cursor.getString(1));
+                saves.add(newSave);
+                cursor.moveToNext();
+            }
+            cursor.close();
+        }
+        catch (Exception e) {
+            saves = new ArrayList<Load>();
+        }
+        return saves;
     }
 }
