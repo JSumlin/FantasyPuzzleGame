@@ -10,6 +10,8 @@
         android:id="@+id/youWinTestButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="340dp"
         android:onClick="onWin"
         android:text="Win"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,9 +22,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:text="00:00"
         android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="00:00" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Add a button or interactive element for the user to interact with the puzzle -->
+    <TextView
+        android:id="@+id/puzzleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Puzzle"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="92dp" />
+
+    <Button
+        android:id="@+id/interactButton"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/puzzleTextView"
+        android:layout_marginTop="502dp"
+        android:layout_marginBottom="181dp"
+        android:onClick="onPuzzleInteraction"
+        android:text="Interact with Puzzle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -84,4 +84,10 @@ public class MainActivity extends AppCompatActivity {
             mediaPlayer.start();
         }
     }
+    public void openFatherActivity(View view) {
+        Intent intent = new Intent(this, FatherActivity.class);
+        startActivity(intent);
+    }
+
+
 }
