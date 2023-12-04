@@ -40,7 +40,7 @@ public class HubActivity extends AppCompatActivity {
     }
 
     public void onCastle2Select(View view){
-        Intent intent = new Intent(this, Castle2Activity.class);
+        Intent intent = new Intent(this, LettersPuzzleActivity.class);
         startActivity(intent);
     }
 
