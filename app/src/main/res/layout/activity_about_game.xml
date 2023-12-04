@@ -15,6 +15,8 @@ android:padding="16dp">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lore details here"
-        android:textSize="16sp"/>
+        android:textColor="#F30505"
+        android:textColorHighlight="#06AEED"
+        android:textSize="16sp" />
 </LinearLayout>
 </ScrollView>
