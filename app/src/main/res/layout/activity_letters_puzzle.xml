@@ -30,4 +30,16 @@
         android:text="Check"
         android:onClick="checkGuess" />
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp"
+        android:background="#000000"
+        android:padding="5dp"
+        android:text="Guess a 4 letter word Merriam-Webster defines as: &quot;a usually brief written message or report&quot;"
+        android:textColor="#FFFFFF" />
+
 </RelativeLayout>

@@ -36,14 +36,14 @@ public class LettersPuzzleActivity extends AppCompatActivity {
         guess = new ArrayList<>();
         for (int i = 0; i < targetWord.length(); i++) {
             Button button = createGuessButton(i);
-            guess.add(targetWord.charAt(i));
+            guess.add('A');
             gridLayout.addView(button);
         }
     }
 
     private Button createGuessButton(int index) {
         Button button = new Button(this);
-        button.setText(String.valueOf(targetWord.charAt(index)));
+        button.setText(String.valueOf('A'));
         button.setOnClickListener(v -> onGuessButtonClick((Button) v));
         return button;
     }
