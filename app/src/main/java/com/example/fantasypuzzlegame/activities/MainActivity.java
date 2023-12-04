@@ -21,10 +21,9 @@ public class MainActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
     private Button playMusicButton;
 
-    //@Override
-    protected void beginGame(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void beginGame(View view) {
+        Intent intent = new Intent(this, NewSaveActivity.class);
+        startActivity(intent);
     }
 
     public void loadGame(View view){
