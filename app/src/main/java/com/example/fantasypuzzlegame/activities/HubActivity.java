@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.fantasypuzzlegame.R;
 import com.example.fantasypuzzlegame.database.SaveState;
@@ -37,7 +35,7 @@ public class HubActivity extends AppCompatActivity {
     }
 
     public void onCastle1Select(View view){
-        Intent intent = new Intent(this, Castle1Activity.class);
+        Intent intent = new Intent(this, TestActivity.class);
         startActivity(intent);
     }
 
