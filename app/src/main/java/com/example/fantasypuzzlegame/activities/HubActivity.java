@@ -44,6 +44,11 @@ public class HubActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onCastle3Select(View view){
+        Intent intent = new Intent(this, FatherActivity.class);
+        startActivity(intent);
+    }
+
     public void onSave(View view){
         Intent intent = new Intent(this, SaveActivity.class);
         startActivity(intent);

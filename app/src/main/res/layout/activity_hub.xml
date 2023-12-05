@@ -45,43 +45,65 @@
             android:id="@+id/castle1ImageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="112dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="64dp"
             android:onClick="onCastle1Select"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/castle_1" />
 
-        <ImageButton
-            android:id="@+id/castle2ImageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
-            android:layout_marginEnd="28dp"
-            android:onClick="onCastle2Select"
+        <ImageView
+            android:id="@+id/castle2FlagImage"
+            android:layout_width="54dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="52dp"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/castle1ImageButton"
-            app:srcCompat="@drawable/castle_2" />
+            app:srcCompat="@drawable/red_flag_30x30" />
 
         <ImageView
             android:id="@+id/castle1FlagImage"
             android:layout_width="54dp"
             android:layout_height="55dp"
-            android:layout_marginStart="72dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="32dp"
             android:visibility="invisible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/red_flag_30x30" />
 
-        <ImageView
-            android:id="@+id/castle2FlagImage"
-            android:layout_width="54dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="52dp"
-            android:visibility="invisible"
+        <ImageButton
+            android:id="@+id/castle2ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="24dp"
+            android:onClick="onCastle2Select"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/castle1ImageButton"
+            app:srcCompat="@drawable/castle_2" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="124dp"
+            android:onClick="onCastle3Select"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/castle1ImageButton"
+            app:srcCompat="@drawable/castle3_1_80x80" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="42dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="108dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/castle1ImageButton"
             app:srcCompat="@drawable/red_flag_30x30" />
 
